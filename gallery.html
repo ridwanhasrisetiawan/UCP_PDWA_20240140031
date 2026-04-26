@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Multimedia</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div class="container text-center">
+    <h2>Halaman Multimedia</h2>
+
+    <!-- Gambar -->
+    <img id="gambar" src="https://picsum.photos/400" class="img-fluid rounded mb-3">
+
+    <br>
+    <button onclick="gantiGambar()" class="btn btn-success">Ganti Gambar</button>
+
+    <!-- Video YouTube -->
+    <div class="mt-4">
+        <iframe width="400" height="250" src="https://www.youtube.com/embed/1fjhIWJSxfw" 
+        frameborder="0" allowfullscreen></iframe>
+    </div>
+
+    <!-- Audio -->
+    <div class="mt-4">
+        <audio id="audio" src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3"></audio>
+        <br><br>
+        <button onclick="playAudio()" class="btn btn-success">Play</button>
+        <button onclick="pauseAudio()" class="btn btn-danger">Pause</button>
+    </div>
+
+    <br>
+    <button onclick="info()" class="btn btn-warning mt-3">Info</button>
+
+    <br><br>
+    <a href="index.html" class="btn btn-secondary">Kembali</a>
+</div>
+
+<script>
+    function gantiGambar() {
+        document.getElementById("gambar").src = "https://picsum.photos/401";
+    }
+
+    function playAudio() {
+        document.getElementById("audio").play();
+    }
+
+    function pauseAudio() {
+        document.getElementById("audio").pause();
+    }
+
+    function info() {
+        alert("Ini adalah halaman multimedia Tech Community!");
+    }
+</script>
+
+</body>
+</html>
